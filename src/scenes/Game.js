@@ -14,6 +14,10 @@ class Game extends Phaser.Scene {
   }
 
   create(data) {
+
+    this.cursors = this.input.keyboard.createCursorKeys();
+
+    
     
     this.anims.create({
       key: 'hero-running',
@@ -27,7 +31,9 @@ class Game extends Phaser.Scene {
 
   }
 
-  update(time, delta) {}
+  update(time, delta) {
+   
+  }
 }
 
 export default Game;
