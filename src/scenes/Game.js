@@ -89,6 +89,9 @@ class Game extends Phaser.Scene {
 
   addHero() {
     this.hero = new Hero(this, 100, 320);
+    
+    this.cameras.main.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels);
+    this.cameras.main.startFollow(this.hero);
 
     this.children.moveTo(this.hero, this.children.getIndex(this.map.getLayer('Foreground').tilemapLayer))
 
